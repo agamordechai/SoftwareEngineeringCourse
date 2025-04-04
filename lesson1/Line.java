@@ -1,3 +1,5 @@
+package lesson1;
+
 public class Line {
     private Point start;
     private Point end;
@@ -12,6 +14,6 @@ public class Line {
     }
 
     public String toString() {
-        return "Line from " + start.toString() + " to " + end.toString();
+        return "lesson1.Line from " + start.toString() + " to " + end.toString();
     }
 }
