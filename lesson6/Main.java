@@ -30,6 +30,10 @@ public class Main {
                 } else {
                     System.out.println(r1 + " is less than " + r2);
                 }
+                r1.reduce();
+                r2.reduce();
+                System.out.println("Reduced Rational 1: " + r1);
+                System.out.println("Reduced Rational 2: " + r2);
 
                 break; // Exit the loop after successful execution
             } catch (IOException e) {

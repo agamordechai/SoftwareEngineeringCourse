@@ -20,6 +20,17 @@ public class Rational {
         return this.numerator * other.denominator == this.denominator * other.numerator;
     }
 
+    public void reduce() {
+        int gcd = gcd(numerator, denominator);
+        numerator /= gcd;
+        denominator /= gcd;
+    }
+
+    public static int gcd(int a, int b) {
+        if (b==0) return a;
+        return gcd(b,a%b);
+    }
+
     @Override
     public String toString() {
         return numerator + "/" + denominator;
