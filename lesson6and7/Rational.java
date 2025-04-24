@@ -1,4 +1,4 @@
-package lesson6;
+package lesson6and7;
 
 public class Rational {
     private int numerator;
