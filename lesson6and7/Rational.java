@@ -20,6 +20,28 @@ public class Rational {
         return this.numerator * other.denominator == this.denominator * other.numerator;
     }
 
+    public void plus(Rational other){
+        this.numerator = this.numerator * other.denominator + other.numerator * this.denominator;
+        this.denominator = this.denominator * other.denominator;
+    }
+
+    public void minus(Rational other){
+        this.numerator = this.numerator * other.denominator - other.numerator * this.denominator;
+        this.denominator = this.denominator * other.denominator;
+    }
+
+    public void multiply(Rational other){
+        this.numerator = this.numerator * other.numerator;
+        this.denominator = this.denominator * other.denominator;
+    }
+
+    public void divide(Rational other){
+        if (this.denominator == 0 || other.numerator == 0)
+            throw new ArithmeticException("Division by zero is not allowed");
+        this.numerator = this.numerator * other.denominator;
+        this.denominator = this.denominator * other.numerator;
+    }
+
     public void reduce() {
         int gcd = gcd(numerator, denominator);
         numerator /= gcd;

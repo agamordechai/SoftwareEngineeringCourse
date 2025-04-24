@@ -30,6 +30,20 @@ public class Main {
                 } else {
                     System.out.println(r1 + " is less than " + r2);
                 }
+
+                Rational r3;
+                r3 = new Rational(r11, r12);
+                r3.plus(r2);
+                System.out.println(r1 + " + " + r2 + " = " + r3);
+                r3 = new Rational(r11, r12);
+                r3.minus(r2);
+                System.out.println(r1 + " - " + r2 + " = " + r3);
+                r3 = new Rational(r11, r12);
+                r3.multiply(r2);
+                System.out.println(r1 + " * " + r2 + " = " + r3);
+                r3 = new Rational(r11, r12);
+                r3.divide(r2);
+                System.out.println(r1 + " / " + r2 + " = " + r3);
                 r1.reduce();
                 r2.reduce();
                 System.out.println("Reduced Rational 1: " + r1);
